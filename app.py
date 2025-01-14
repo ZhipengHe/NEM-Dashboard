@@ -2,6 +2,9 @@ import os
 import streamlit as st
 import pandas as pd
 import altair as alt
+import warnings
+warnings.filterwarnings("ignore", message="Could not infer format, so each element will be parsed individually")
+
 
 st.set_page_config(layout="wide")
 
@@ -21,7 +24,7 @@ def load_data(file_path, date_column):
         return None
 
 def chart_by_years(data, y_column, color=None, x_column='MONTH', year_column='YEAR',
-                             y_title='Trading Price', x_title='Month'):
+                             y_title='Trade Price', x_title='Month'):
     """
     Creates an interactive Altair chart with line, highlight points, and tooltips.
 
@@ -30,7 +33,7 @@ def chart_by_years(data, y_column, color=None, x_column='MONTH', year_column='YE
         y_column (str): The column name for the y-axis values.
         x_column (str, optional): The column name for the x-axis (default is 'MONTH').
         year_column (str, optional): The column name for the year (default is 'YEAR').
-        y_title (str, optional): Title for the y-axis (default is 'Trading Price').
+        y_title (str, optional): Title for the y-axis (default is 'Trade Price').
         x_title (str, optional): Title for the x-axis (default is 'Month').
 
     Returns:
@@ -83,14 +86,14 @@ def chart_by_years(data, y_column, color=None, x_column='MONTH', year_column='YE
 
 
 # Title of the app
-st.title("Exploratory Data Analysis for NEM Trading Price")
+st.title("Exploratory Data Analysis for NEM Trade Price")
 
 
 
 # Sidebar
-st.sidebar.title("NEM Trading Price Analysis")
-st.sidebar.write("Welcome to the NEM Trading Price Analysis Web App.")
-st.sidebar.write("Please select a region to analyse the trading price data.")
+st.sidebar.title("NEM Trade Price Analysis")
+st.sidebar.write("Welcome to the NEM Trade Price Analysis Web App.")
+st.sidebar.write("Please select a region to analyse the trade price data.")
 selected_region = st.sidebar.selectbox("Select a region:", REGIONS, index=1)
 
 
@@ -102,12 +105,12 @@ selected_region = st.sidebar.selectbox("Select a region:", REGIONS, index=1)
 # file_path = os.path.join(data_folder, f"PRICE_AND_DEMAND_ALL_YEARS_{selected_region}.csv")
 
 
-### Chart 1: Trading Price Over 2019-2024 for selected region by month
+### Chart 1: Trade Price Over 2019-2024 for selected region by month
 ### x-axis: year_month, x-range: 2019-2024, y-axis: mean, median, min, max
 
 with st.container():
     file_path = f"data/analysis/PRICE_STATS_BY_MONTH_{selected_region}.csv"
-    st.subheader(f"Trading Price from 2019 to 2024 for {selected_region} by Months")
+    st.subheader(f"Trade Price from 2019 to 2024 for {selected_region} by Months")
 
     option = ['mean', 'median', 'min', 'max']
     selection = st.pills("Select one or more statistic to display", 
@@ -123,7 +126,7 @@ with st.container():
 
             if selection:
                     _selection = [f'RRP_{s}' for s in selection]
-                    mychart = st.line_chart(data, x='YEAR_MONTH', y=_selection, x_label= "Year", y_label='Trading Price')
+                    mychart = st.line_chart(data, x='YEAR_MONTH', y=_selection, x_label= "Year", y_label='Trade Price')
             else:
                 st.warning("Please select one or more statistics to display the plot.")
         else:
@@ -131,12 +134,12 @@ with st.container():
     else:
         st.warning("Please select a region to analyse.")
 
-### Chart 2: Trading Price by month for selected region (each line represents a year)
+### Chart 2: Trade Price by month for selected region (each line represents a year)
 ### x-axis: month, x-range: Jan-Dec, y-axis: mean, median, min, max
 
 with st.container():
 
-    st.subheader(f"Trading Price for {selected_region} by Different Years")
+    st.subheader(f"Trade Price for {selected_region} by Different Years")
 
     option = ['mean', 'median', 'min', 'max']
     selection = st.pills("Select a statistic to display", 
@@ -226,11 +229,11 @@ with st.container():
         else:
             st.warning("Please select a region to analyse.")
 
-### Chart 3: Trading Price Monthly Distribution for selected_region
+### Chart 3: Trade Price Monthly Distribution for selected_region
 ### x-axis: month, x-range: day, y-axis: mean, median, min, max
 
 with st.container():
-    st.subheader(f"Trading Price Monthly Distribution for {selected_region}")
+    st.subheader(f"Trade Price Monthly Distribution for {selected_region}")
 
     file_path = f"data/analysis/PRICE_STATS_BY_DAY_{selected_region}.csv"
 
@@ -265,12 +268,12 @@ with st.container():
                 )
                 
                 rrp_line = base.mark_line(color='red').encode(
-                    y=alt.Y(f'{_selection_RRP}:Q', title='Trading Price',
+                    y=alt.Y(f'{_selection_RRP}:Q', title='Trade Price',
                             scale=alt.Scale(zero=False, nice=True)),
                     tooltip=['DAY', f'{_selection_RRP}'],
                     color=alt.value('red')
                 ).properties(
-                    title='Trading Price'
+                    title='Trade Price'
                 )
                 
                 demand_line = base.mark_line(color='blue', strokeDash=[5, 5]).encode(
@@ -296,11 +299,11 @@ with st.container():
             else:
                 st.warning("Please select one statistic to display the plot.")
 
-### Chart 4: Trading Price Weekly Distribution for selected_region
+### Chart 4: Trade Price Weekly Distribution for selected_region
 ### x-axis: week, x-range: day, y-axis: mean, median, min, max
 
 with st.container():
-    st.subheader(f"Trading Price Weekly Distribution for {selected_region}")
+    st.subheader(f"Trade Price Weekly Distribution for {selected_region}")
 
     file_path = f"data/analysis/PRICE_STATS_BY_DAY_{selected_region}.csv"
 
@@ -335,7 +338,7 @@ with st.container():
                             labelExpr="{'0': 'Mon', '1': 'Tue', '2': 'Wed', '3': 'Thu', '4': 'Fri', '5': 'Sat', '6': 'Sun'}[datum.value]")),)
                 
                 rrp_line = base.mark_line(color='blue').encode(
-                    y=alt.Y(f'{_selection_RRP}:Q', title='Trading Price',
+                    y=alt.Y(f'{_selection_RRP}:Q', title='Trade Price',
                             scale=alt.Scale(zero=False, nice=True)),
                     tooltip=['WEEKDAY', f'{_selection_RRP}']
                 )
@@ -357,11 +360,11 @@ with st.container():
     else:
         st.warning("Please select a region to analyse.")
 
-### Chart 5: Trading Price Daily Distribution for selected_region
+### Chart 5: Trade Price Daily Distribution for selected_region
 ### x-axis: day, x-range: hour, y-axis: mean, median, min, max
 
 with st.container():
-    st.subheader(f"Trading Price Daily Distribution for {selected_region}")
+    st.subheader(f"Trade Price Daily Distribution for {selected_region}")
 
     col1, col2, _ = st.columns([0.25, 0.20, 0.55])
 
@@ -399,7 +402,7 @@ with st.container():
                     )
                     
                     rrp_line = base.mark_line(color='red').encode(
-                        y=alt.Y(f'{_selection_RRP}:Q', title='Trading Price',
+                        y=alt.Y(f'{_selection_RRP}:Q', title='Trade Price',
                                 scale=alt.Scale(zero=False, nice=True)),
                         tooltip=['HOUR', f'{_selection_RRP}']
                     )
@@ -452,7 +455,7 @@ with st.container():
                     )
                     
                     rrp_line = base.mark_line(color='red').encode(
-                        y=alt.Y(f'{_selection_RRP}:Q', title='Trading Price',
+                        y=alt.Y(f'{_selection_RRP}:Q', title='Trade Price',
                                 scale=alt.Scale(zero=False, nice=True)),
                         tooltip=['time', f'{_selection_RRP}']
                     )
