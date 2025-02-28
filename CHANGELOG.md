@@ -16,6 +16,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update the README.md file with acknowledgements.
 
+### Fixed
+
+- Fix the CMD command in the Dockerfile (issue #4). 
+
 
 ## [0.1.0] - 2025-02-28
 
