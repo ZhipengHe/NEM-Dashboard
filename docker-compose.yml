@@ -1,9 +1,8 @@
-version: '3.8'
-
 services:
   nem-dashboard:
-    image: zhipenghe/nem-dashboard:0.1
-    # build: .
+    image: zhipenghe/nem-dashboard:latest
+    pull_policy: always
+    container_name: nem-dashboard
     ports:
       - "8501:8501"
     environment:

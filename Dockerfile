@@ -5,10 +5,6 @@ FROM python:3.11-slim
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y \
-    build-essential \
-    curl \
-    software-properties-common \
-    git \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy the requirements file into the container
@@ -29,8 +25,8 @@ ENV STREAMLIT_SERVER_HEADLESS=true \
     STREAMLIT_SERVER_ADDRESS=0.0.0.0
 
 # Add metadata labels
-LABEL maintainer="zhipeng.he@hdr.qut.edu.au" \
-      version="0.1" \
+LABEL author="Zhipeng He" \
+      email="zhipeng.he@hdr.qut.edu.au" \
       description="Streamlit application container for NEM data analysis"
 
 # Run the Streamlit app
