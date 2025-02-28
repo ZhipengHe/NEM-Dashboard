@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2025-03-01
+
 ### Added
 
 - Add `CODE_OF_CONDUCT.md` file and `CONTRIBUTING.md` file.
@@ -15,6 +17,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Update the README.md file with acknowledgements.
+- Add GitHub Actions and Docker badges to README.md.
+
+### Fixed
+
+- Fix the CMD command in the Dockerfile (issue #4). 
 
 
 ## [0.1.0] - 2025-02-28
@@ -30,7 +37,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Changelog 
 
 
-[Unreleased]: https://github.com/ZhipengHe/NEM-Dashboard/compare/v0.0.1...HEAD
-[0.1.0]: https://github.com/ZhipengHe/NEM-Dashboard/releases/tag/v0.0.1
+[Unreleased]: https://github.com/ZhipengHe/NEM-Dashboard/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/ZhipengHe/NEM-Dashboard/compare/v0.1.0...v0.1.1
+[0.1.0]: https://github.com/ZhipengHe/NEM-Dashboard/releases/tag/v0.1.0
 
 

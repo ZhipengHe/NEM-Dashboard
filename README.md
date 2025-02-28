@@ -1,5 +1,13 @@
 # NEM Dashboard
 
+[![GitHub Actions Build](https://img.shields.io/github/actions/workflow/status/ZhipengHe/NEM-Dashboard/docker-build-push.yml)](https://github.com/ZhipengHe/NEM-Dashboard/actions/workflows/docker-build-push.yml) 
+[![Docker Image Version](https://img.shields.io/docker/v/zhipenghe/nem-dashboard)](https://hub.docker.com/r/zhipenghe/nem-dashboard) 
+[![Docker Image Size](https://img.shields.io/docker/image-size/zhipenghe/nem-dashboard)](https://hub.docker.com/r/zhipenghe/nem-dashboard) 
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fnem.zhipenghe.me)](https://nem.zhipenghe.me)
+[![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/ZhipengHe/NEM-Dashboard)](https://github.com/ZhipengHe/NEM-Dashboard/issues)
+[![License](https://img.shields.io/github/license/ZhipengHe/NEM-Dashboard)](LICENSE)
+
+
 This is a simple dashboard for Australian National Electricity Market (NEM) data. The data is extracted from the AEMO website by using Python package [NEMOSIS](https://github.com/UNSW-CEEM/NEMOSIS). The extracted data is stored in folder `data` and the dashboard is created using [Streamlit](https://streamlit.io/).
 
 ## Installation
