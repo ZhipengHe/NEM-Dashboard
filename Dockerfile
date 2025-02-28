@@ -4,9 +4,6 @@ FROM python:3.11-slim
 # Set the working directory inside the container
 WORKDIR /app
 
-RUN RUN apt-get update && rm -rf /var/lib/apt/lists/*
-
-
 # Copy the requirements file into the container
 COPY requirements.txt .
 
