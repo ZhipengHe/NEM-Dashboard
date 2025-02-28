@@ -59,6 +59,8 @@ After running the dashboard, you can access it by visiting `http://localhost:850
 
 Following the [NEMOSIS](https://github.com/UNSW-CEEM/NEMOSIS) project, this project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
 
+## Acknowledgements
 
+- The copyright of the data belongs to the Australian Energy Market Operator (AEMO). Use of the data is subject to the [AEMO Copyright Permissions](https://www.aemo.com.au/privacy-and-legal-notices/copyright-permissions).
 
  
