@@ -2,6 +2,7 @@ name: Docker Build and Push - CI Pipeline
 
 on:
     push:
+      branches: [ main ]
       tags: [ 'v*' ]
     pull_request:
       branches:  [ main ]
@@ -30,6 +31,7 @@ jobs:
               with:
                 username: ${{ secrets.DOCKERHUB_USERNAME }}
                 password: ${{ secrets.DOCKERHUB_TOKEN }}
+              if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v') }}
 
             # QEMU is required for building multi-arch images 
             - name: Set up QEMU 
@@ -43,7 +45,7 @@ jobs:
               with:
                 context: .
                 platforms: linux/amd64,linux/arm64
-                push: ${{ github.event_name != 'pull_request' }}
+                push: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v') }}
                 tags: ${{ steps.meta.outputs.tags }}
                 labels: ${{ steps.meta.outputs.labels }}
             
@@ -54,5 +56,6 @@ jobs:
                 password: ${{ secrets.DOCKERHUB_TOKEN }}
                 repository: zhipenghe/nem-dashboard
                 short-description: ${{ github.event.repository.description }}
+              if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v') }}
 
 
