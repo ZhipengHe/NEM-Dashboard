@@ -54,6 +54,19 @@ st.page_link("topics/Topic-2-Outage-Analysis.py", label="**Topic 2: Power Outage
 st.page_link("topics/Topic-3-Renewable-Integration.py", label="**Topic 3: Renewable Integration Analysis and Impact Forecast**", icon="♻️")
 st.page_link("topics/Topic-4-Infrastructure-Analysis.py", label="**Topic 4: Electricity Infrastructure Analysis and Performance Assessment**", icon="🗼")
 
+## External Resources
+st.subheader("External Resources")
+
+st.write("For more information on the NEM and related topics, please refer to the following resources:")
+
+st.markdown('''
+            - [A Hackers Guide to AEMO & NEM Data](https://adgefficiency.com/hackers-aemo/)
+            - [AEMO NEM Data Dashboard](https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/data-dashboard-nem)
+            - [OpenElectricity](https://openelectricity.org.au/) and its [documentation](https://docs.openelectricity.org.au/introduction) 
+            - [NEMOSIS](https://github.com/UNSW-CEEM/NEMOSIS): A Python package for downloading and processing NEM data
+            - [nemwebR](https://github.com/aleemon/nemwebR): An R package for downloading and processing NEM data
+            ''')
+
 
 ## Acknowledgements
 st.subheader("Acknowledgements")
