@@ -6,6 +6,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Add new home page for the dashboard.
+- Add visualisation for four topics.
+- Add README page in the dashboard.
+
+### Changed
+
+- Change the license from GPL v3 to MIT license.
+
+### Removed
+
+- remove jupyter notebook using NEMOSIS package.
+
 ## [0.1.1] - 2025-03-01
 
 ### Added

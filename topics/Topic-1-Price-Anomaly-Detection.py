@@ -6,7 +6,7 @@ import warnings
 warnings.filterwarnings("ignore", message="Could not infer format, so each element will be parsed individually")
 
 
-st.header("Topic 1: Price Anomaly Detection")
+st.header("Topic 1: Electricity Pricing Anomaly Detection and Analysis")
 
 st.subheader("About Topic")
 
@@ -183,7 +183,7 @@ st.info('''
 st.markdown('''
             ##### Available Datasets
 
-            The data used in the above analysis is sourced from the Australian Energy Market Operator (AEMO) and is publicly available \
+            These tables are publicly available \
             on the [NEMWEB](https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/market-data-nemweb). \
             Please refer to the [MMS Data Model](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report.htm) \
             for detailed information on the data structure and definitions. 
