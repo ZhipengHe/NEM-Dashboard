@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/github/license/ZhipengHe/NEM-Dashboard)](LICENSE)
 
 
-This is a simple dashboard for Australian National Electricity Market (NEM) data. The data is extracted from the AEMO website by using Python package [NEMOSIS](https://github.com/UNSW-CEEM/NEMOSIS). The extracted data is stored in folder `data` and the dashboard is created using [Streamlit](https://streamlit.io/).
+This is a simple dashboard for Australian National Electricity Market (NEM) data. The data used in the above analysis is sourced from the Australian Energy Market Operator (AEMO) and is publicly available on the [NEMWEB](https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/market-data-nemweb). The extracted data is stored in folder `data` and the dashboard is created using [Streamlit](https://streamlit.io/).
 
 ## Installation
 
@@ -64,7 +64,7 @@ After running the dashboard, you can access it by visiting `http://localhost:850
 
 ## License
 
-Following the [NEMOSIS](https://github.com/UNSW-CEEM/NEMOSIS) project, this project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
