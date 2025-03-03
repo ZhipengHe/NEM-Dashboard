@@ -4,7 +4,6 @@ import pandas as pd
 import altair as alt
 import warnings
 import datetime
-warnings.filterwarnings("ignore", message="Could not infer format, so each element will be parsed individually")
 
 
 st.header("Topic 4: Electricity Infrastructure Analysis and Performance Assessment")
@@ -22,8 +21,30 @@ st.write("---")
 
 ## Main Content
 
-st.warning('This dashboard is a work in progress. It is intended for educational purposes only. If you have any feedback \
-           or suggestions, please feel free to open an issue on the [GitHub](https://github.com/ZhipengHe/NEM-Dashboard/issues).', icon="⚠️")
+## embedding aemo official dashboard as example:
+# https://aemo.com.au/aemo/apps/visualisations/elec-nem-summary-tiles.html
+
+with st.container():
+    st.subheader("Example: **NEM Electricity Summary Dashboard**")
+
+    st.write("This is an official dashboard for real-time NEM summary provided by AEMO. \
+            ")
+    st.warning('''
+            **Copyright Notice**
+            - The NEM Official Dashboard displayed on this website is the property of the Australian \
+               Energy Market Operator (AEMO). All rights, including data, design, and content, belong \
+               to AEMO and are used here for ***educational purposes only****.
+            - This website does ***not*** claim ownership of the dashboard or its content. For official \
+               information, licensing, or permissions, please visit [AEMO Website](https://aemo.com.au/).
+            - The dashboard is sourced ***directly from AEMO***, and we do ***not*** modify or control its \
+               content, data accuracy, or availability.  
+            - This integration aims to help students understand the project and the workings of the \
+               ***National Electricity Market (NEM)***. Users should refer to ***AEMO's official website*** \
+               for authoritative data and operational decisions.  
+            ''', icon="⚠️")
+
+    st.components.v1.iframe("https://aemo.com.au/aemo/apps/visualisations/elec-nem-summary-tiles.html", height=860)
+    st.caption("Source: [AEMO NEM Summary Dashboard](https://aemo.com.au/aemo/apps/visualisations/elec-nem-summary-tiles.html)")
 
 st.write("---")
 
@@ -43,8 +64,6 @@ st.markdown('''
 
             These tables are publicly available \
             on the [NEMWEB](https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/market-data-nemweb). \
-            Please refer to the [MMS Data Model](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report.htm) \
-            for detailed information on the data structure and definitions. 
 
             If you are interested in exploring the interconnection and flow of electricity across regions, you may consider the following datasets:
             - [`DISPATCH.DISPATCHINTERCONNECTORRES`](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report_files/Elec20.htm#123): \
@@ -60,6 +79,9 @@ st.markdown('''
             - [`DISPATCH.DISPATCH_UNIT_SCADA`](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report.htm): \
             This table contains the real-time MW reading from generators and scheduled loads for each dispatch unit, including renewable energy sources, \
             by SCADA (Supervisory Control and Data Acquisition) systems.
+
+            Please refer to the [MMS Data Model](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report.htm) \
+            for detailed information on the data structure and definitions. 
 
             If you are interested in geographical and locational aspects of the NEM infrastructure, you may consider the following datasets:
             - [Electricity Transmission Lines](https://digital.atlas.gov.au/datasets/digitalatlas::electricity-transmission-lines/about): \
