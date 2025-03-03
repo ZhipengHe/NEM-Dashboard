@@ -1,9 +1,6 @@
-import os
 import streamlit as st
 import pandas as pd
 import altair as alt
-import warnings
-import datetime
 
 
 st.header("Topic 2: Power Outage Root Cause and Impact Analysis")

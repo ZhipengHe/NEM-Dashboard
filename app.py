@@ -1,13 +1,11 @@
 import streamlit as st
 import warnings
-warnings.filterwarnings("ignore", message="Could not infer format, so each element will be parsed individually")
 
 
 st.set_page_config(
     page_title="NEM Dashboard | A simple dashboard for Australia's National Electricity Market (NEM) data",
     page_icon=":rocket:",
     layout="wide",
-    initial_sidebar_state="expanded",
     menu_items={
         'Get Help': "https://github.com/ZhipengHe/NEM-Dashboard",
         'Report a bug': "https://github.com/ZhipengHe/NEM-Dashboard/blob/main/CONTRIBUTING.md#reporting-bugs",

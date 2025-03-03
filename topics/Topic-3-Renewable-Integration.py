@@ -16,9 +16,6 @@ st.write("---")
 
 ## Main Content
 
-st.warning('This dashboard is a work in progress. It is intended for educational purposes only. If you have any feedback \
-           or suggestions, please feel free to open an issue on the [GitHub](https://github.com/ZhipengHe/NEM-Dashboard/issues).', icon="⚠️")
-
 # List of regions
 REGIONS =['ALL', 'NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1']
 
@@ -146,7 +143,7 @@ st.subheader("Data Sources")
 
 st.info('''
         Before starting your analysis,
-        - Please select one or more of the datasets below, or choose other datasets that best align with your proposed research objectives. 
+        - Please select one or more of the datasets below, or choose/add other datasets that best align with your proposed research objectives. 
         - Make sure your selection reflects your project's goals and the features you need for analysis.
         ''', icon="💡")
 
