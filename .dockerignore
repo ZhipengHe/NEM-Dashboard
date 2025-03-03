@@ -20,7 +20,7 @@ env/
 .git/
 .github/
 .gitignore
-README.md
+# README.md # Readme should be included in the image
 *.log
 *.bak
 *.swp
@@ -29,4 +29,5 @@ README.md
 *.egg-info/
 dist/
 build/
+archive/
 
