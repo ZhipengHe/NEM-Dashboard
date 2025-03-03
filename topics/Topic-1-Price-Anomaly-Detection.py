@@ -1,9 +1,7 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
-import warnings
 
-warnings.filterwarnings("ignore", message="Could not infer format, so each element will be parsed individually")
 
 
 st.header("Topic 1: Electricity Pricing Anomaly Detection and Analysis")
@@ -23,9 +21,9 @@ st.write("---")
 REGIONS =[ 'NSW1', 'QLD1', 'SA1', 'TAS1', 'VIC1']
 
 # Load data function
-def load_data(file_path, date_column):
+def load_data(file_path, date_columns):
     try:
-        data = pd.read_csv(file_path, parse_dates=[date_column])
+        data = pd.read_csv(file_path, parse_dates=date_columns)
         return data
     except Exception as e:
         st.error(f"Error loading data: {e}")
@@ -69,7 +67,7 @@ with st.container():
     with hours:
         file_path = f"data/analysis/PRICE_STATS_BY_HOUR_{selected_region}.csv"
         if selected_region:
-            data = load_data(file_path, date_column='YEAR_MONTH_DAY_HOUR')
+            data = load_data(file_path, date_columns=['YEAR_MONTH_DAY_HOUR'])
             if data is not None:
                 # get year in the selected range
                 data = data[data['YEAR'] == year]
@@ -115,7 +113,7 @@ with st.container():
 
         file_path = f"data/analysis/PRICE_AND_DEMAND_ALL_YEARS_{selected_region}.csv"
         if selected_region:
-            data = load_data(file_path, date_column='SETTLEMENTDATE')
+            data = load_data(file_path, date_columns=['SETTLEMENTDATE'])
             if data is not None:
                 # get year in the selected range
                 data = data[data['YEAR'] == year]
@@ -176,7 +174,7 @@ st.subheader("Data Sources")
 
 st.info('''
         Before starting your analysis,
-        - Please select one or more of the datasets below, or choose other datasets that best align with your proposed research objectives. 
+        - Please select one or more of the datasets below, or choose/add other datasets that best align with your proposed research objectives. 
         - Make sure your selection reflects your project's goals and the features you need for analysis.
         ''', icon="💡")
 
@@ -185,25 +183,25 @@ st.markdown('''
 
             These tables are publicly available \
             on the [NEMWEB](https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/market-data-nemweb). \
-            Please refer to the [MMS Data Model](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report.htm) \
-            for detailed information on the data structure and definitions. 
-            
             Here lists the relevant table names and features from MMS Data Model used in above example:
             - [`DISPATCH.DISPATCHPRICE`](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report_files/Elec21.htm#154): \
-                This table provides records each 5 minute dispatch price for each region, including whether an intervention has occurred, or price override (e.g. for Administered Price Cap).
+                This table provides records each 5-minute dispatch price for each region, including whether an intervention has occurred, or price override (e.g. for Administered Price Cap).
                 - `DISPATCHPRICE.RRP` = Dispatch price in $/MWh
             - [`DISPATCH.DISPATCHREGIONSUM`](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report_files/Elec22.htm#163): \
                 This table sets out the 5-minute solution for each dispatch run for each region, including the total demand, generation, and interconnector flows.
                 - `DISPATCHREGIONSUM.TOTALDEMAND` = Total demand in MW
             - [`TRADING_DATA.TRADINGPRICE`](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report_files/Elec60.htm#16): \
                 This table provides similar information to DISPATCH.DISPATCHPRICE, but updated every 30 minutes.
-            
+
+            Please refer to the [MMS Data Model](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report.htm) \
+            for detailed information on the data structure and definitions. 
+
             ##### Data Download
 
             - You can manually download these datasets from the [Monthly Archive](https://visualisations.aemo.com.au/aemo/nemweb/#mms-data-model) section of the NEMWEB portal by month and year.
             - Alternatively, you can use the out-of-box packages to download these datasets from the NEMWEB portal, such as:
                 - Python package: [NEMOSIS](https://github.com/UNSW-CEEM/NEMOSIS)
-                - R package: [nemwebR](https://github.com/aleemon/nemwebR)
+                - R package: [nemwebR](https://github.com/aleemon/nemwebR) (Limited functionality, last updated in 2022)
             ''')
 
 

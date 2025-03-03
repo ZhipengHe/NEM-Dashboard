@@ -12,11 +12,11 @@ st.write('''
 
          [![Docker Image Version](https://img.shields.io/docker/v/zhipenghe/nem-dashboard)](https://hub.docker.com/r/zhipenghe/nem-dashboard) \
          [![Docker Image Size](https://img.shields.io/docker/image-size/zhipenghe/nem-dashboard)](https://hub.docker.com/r/zhipenghe/nem-dashboard) \
-         [![License](https://img.shields.io/github/license/ZhipengHe/NEM-Dashboard)](LICENSE)"
+         [![License](https://img.shields.io/github/license/ZhipengHe/NEM-Dashboard)](LICENSE)
 
          ***Author: Zhipeng He ([zhipeng.he@hdr.qut.edu.au](mailto:zhipeng.he@hdr.qut.edu.au))***
          
-         ***Last Updated: March 03, 2025***
+         ***Last Updated: March 04, 2025***
         ''')
 
 # st.write("---")
@@ -60,16 +60,22 @@ st.subheader("External Resources")
 st.write("For more information on the NEM and related topics, please refer to the following resources:")
 
 st.markdown('''
-            - [A Hackers Guide to AEMO & NEM Data](https://adgefficiency.com/hackers-aemo/)
-            - [AEMO NEM Data Dashboard](https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/data-dashboard-nem)
-            - [OpenElectricity](https://openelectricity.org.au/) and its [documentation](https://docs.openelectricity.org.au/introduction) 
-            - [NEMOSIS](https://github.com/UNSW-CEEM/NEMOSIS): A Python package for downloading and processing NEM data
-            - [nemwebR](https://github.com/aleemon/nemwebR): An R package for downloading and processing NEM data
+            - [A Hackers Guide to AEMO & NEM Data](https://adgefficiency.com/hackers-aemo/): An awesome guide for \
+                the newbies to the NEM data
+            - [AEMO NEM Data Dashboard](https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/data-dashboard-nem): \
+                The official data dashboard for the NEM data on the AEMO website
+            - [OpenElectricity](https://openelectricity.org.au/): An open-source platform for exploring NEM data (Limited access to data,
+                but great for learning the [documentation](https://docs.openelectricity.org.au/introduction))
+            - [NEMOSIS](https://github.com/UNSW-CEEM/NEMOSIS): A Python package for downloading and processing NEM \
+                data. It also includes a packaged GUI executable file. ([Documentation](https://github.com/UNSW-CEEM/NEMOSIS/wiki))
+            - [nem-data](https://github.com/ADGEfficiency/nem-data): A Python CLI to access NEM data
+            - [nemwebR](https://github.com/aleemon/nemwebR): An R package for downloading and processing NEM data \
+                (Limited functionality, last updated in 2022)
             ''')
 
 
 ## Acknowledgements
 st.subheader("Acknowledgements")
 
-st.write("The copyright of the NEM data belongs to the Australian Energy Market Operator (AEMO). Use of the data is \
+st.write("The copyright of the NEM data, dashboard and related materials belongs to the Australian Energy Market Operator (AEMO). Use of the data is \
          subject to the [AEMO Copyright Permissions](https://www.aemo.com.au/privacy-and-legal-notices/copyright-permissions).")
