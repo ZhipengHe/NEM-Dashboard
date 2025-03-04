@@ -182,10 +182,13 @@ st.markdown('''
             ##### Data Download
 
             - You can manually download outage tables from the [Monthly Archive](https://visualisations.aemo.com.au/aemo/nemweb/#mms-data-model) section of the NEMWEB portal. \
+            We recommend downloading zipped CSV files for your chosen datasets rather than the entire zipped monthly database. \
             Since `NETWORK.NETWORK_OUTAGEDETAIL` stores the details of network outages from 2003 to nearest available month, you do not need to download the data every month. \
             `NETWORK.NETWORK_OUTAGESTATUSCODE` is a static table, so you only need to download it once.
             - For High Impact Outages, you can download the datasets from the [High Impact Outages](https://www.nemweb.com.au/REPORTS/CURRENT/HighImpactOutages/) page.
             - For Power System Incident Reports, you can download the reports from the [Power System Incident Reports](https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/nem-events-and-reports/power-system-operating-incident-reports) page.
+            - If you consider the weather data for analysis, you can download the climate data from the \
+                [Bureau of Meteorology (BOM)](http://www.bom.gov.au/climate/data/index.shtml).
             ''')
 
 

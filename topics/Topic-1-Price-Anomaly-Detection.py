@@ -198,10 +198,13 @@ st.markdown('''
 
             ##### Data Download
 
-            - You can manually download these datasets from the [Monthly Archive](https://visualisations.aemo.com.au/aemo/nemweb/#mms-data-model) section of the NEMWEB portal by month and year.
+            - You can manually download these datasets from the [Monthly Archive](https://visualisations.aemo.com.au/aemo/nemweb/#mms-data-model) section \
+                of the NEMWEB portal by month and year. We recommend downloading zipped CSV files for your chosen datasets rather than the entire zipped monthly database.
             - Alternatively, you can use the out-of-box packages to download these datasets from the NEMWEB portal, such as:
                 - Python package: [NEMOSIS](https://github.com/UNSW-CEEM/NEMOSIS)
                 - R package: [nemwebR](https://github.com/aleemon/nemwebR) (Limited functionality, last updated in 2022)
+            - If you consider the weather data for analysis, you can download the climate data from the \
+                [Bureau of Meteorology (BOM)](http://www.bom.gov.au/climate/data/index.shtml).
             ''')
 
 
