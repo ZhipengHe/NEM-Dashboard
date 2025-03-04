@@ -1,0 +1,1 @@
+FROM zhipenghe/nem-dashboard:latest
