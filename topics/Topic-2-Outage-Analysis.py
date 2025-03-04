@@ -58,8 +58,11 @@ with st.container():
             # Count outages per month
             outages_per_month = data.groupby("YEAR_MONTH").size().reset_index(name="COUNT")
 
+            # Convert YEAR_MONTH to datetime for proper Altair processing
+            outages_per_month["YEAR_MONTH"] = pd.to_datetime(outages_per_month["YEAR_MONTH"])
+
             # Compute the overall mean of outages.
-            mean_value = outages_per_month['COUNT'].mean()
+            mean_value = round(outages_per_month['COUNT'].mean())
 
             # Plot outages over time
             base = alt.Chart(outages_per_month).encode(
@@ -77,7 +80,7 @@ with st.container():
                 y=alt.Y("baseline:Q"),
                 y2=alt.Y2("COUNT:Q")
             ).transform_filter(
-                alt.datum.COUNT > mean_value
+                alt.datum.COUNT >= mean_value
             ).transform_calculate(
                 baseline=str(mean_value)
             )
