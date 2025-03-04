@@ -185,11 +185,9 @@ st.markdown('''
             on the [NEMWEB](https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/market-data-nemweb). \
             Here lists the relevant table names and features from MMS Data Model used in above example:
             - [`DISPATCH.DISPATCHPRICE`](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report_files/Elec21.htm#154): \
-                This table provides records each 5-minute dispatch price for each region, including whether an intervention has occurred, or price override (e.g. for Administered Price Cap).
-                - `DISPATCHPRICE.RRP` = Dispatch price in $/MWh
+                This table provides records each 5-minute dispatch price (in $/MWh) for each region, including whether an intervention has occurred, or price override (e.g. for Administered Price Cap).
             - [`DISPATCH.DISPATCHREGIONSUM`](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report_files/Elec22.htm#163): \
                 This table sets out the 5-minute solution for each dispatch run for each region, including the total demand, generation, and interconnector flows.
-                - `DISPATCHREGIONSUM.TOTALDEMAND` = Total demand in MW
             - [`TRADING_DATA.TRADINGPRICE`](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report_files/Elec60.htm#16): \
                 This table provides similar information to DISPATCH.DISPATCHPRICE, but updated every 30 minutes.
 
