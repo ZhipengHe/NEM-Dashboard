@@ -58,8 +58,11 @@ with st.container():
             # Count outages per month
             outages_per_month = data.groupby("YEAR_MONTH").size().reset_index(name="COUNT")
 
+            # Convert YEAR_MONTH to datetime for proper Altair processing
+            outages_per_month["YEAR_MONTH"] = pd.to_datetime(outages_per_month["YEAR_MONTH"])
+
             # Compute the overall mean of outages.
-            mean_value = outages_per_month['COUNT'].mean()
+            mean_value = round(outages_per_month['COUNT'].mean())
 
             # Plot outages over time
             base = alt.Chart(outages_per_month).encode(
@@ -77,7 +80,7 @@ with st.container():
                 y=alt.Y("baseline:Q"),
                 y2=alt.Y2("COUNT:Q")
             ).transform_filter(
-                alt.datum.COUNT > mean_value
+                alt.datum.COUNT >= mean_value
             ).transform_calculate(
                 baseline=str(mean_value)
             )
@@ -179,10 +182,13 @@ st.markdown('''
             ##### Data Download
 
             - You can manually download outage tables from the [Monthly Archive](https://visualisations.aemo.com.au/aemo/nemweb/#mms-data-model) section of the NEMWEB portal. \
+            We recommend downloading zipped CSV files for your chosen datasets rather than the entire zipped monthly database. \
             Since `NETWORK.NETWORK_OUTAGEDETAIL` stores the details of network outages from 2003 to nearest available month, you do not need to download the data every month. \
             `NETWORK.NETWORK_OUTAGESTATUSCODE` is a static table, so you only need to download it once.
             - For High Impact Outages, you can download the datasets from the [High Impact Outages](https://www.nemweb.com.au/REPORTS/CURRENT/HighImpactOutages/) page.
             - For Power System Incident Reports, you can download the reports from the [Power System Incident Reports](https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/nem-events-and-reports/power-system-operating-incident-reports) page.
+            - If you consider the weather data for analysis, you can download the climate data from the \
+                [Bureau of Meteorology (BOM)](http://www.bom.gov.au/climate/data/index.shtml).
             ''')
 
 

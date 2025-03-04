@@ -60,15 +60,15 @@ st.markdown('''
             Here provides some key datasets from different perspectives that you may consider for your analysis.
 
             These tables are publicly available \
-            on the [NEMWEB](https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/market-data-nemweb). \
+            on the [NEMWEB](https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/market-data-nemweb).
 
-            If you are interested in exploring the interconnection and flow of electricity across regions, you may consider the following datasets:
+            (1) If you are interested in exploring the interconnection and flow of electricity across regions, you may consider the following datasets:
             - [`DISPATCH.DISPATCHINTERCONNECTORRES`](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report_files/Elec20.htm#123): \
-            This table contains the dispatch interconnector flow results, including the flow direction, MW flow, and constraints for each interconnector in the NEM. \
+            This table contains the dispatch interconnector flow results, including the flow direction, MW flow, and constraints for each interconnector in the NEM. 
             - [`DISPATCH.DISPATCHREGIONSUM`](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report_files/Elec22.htm#163): \
             This table sets out the 5-minute solution for each dispatch run for each region, including the total demand, generation, and interconnector flows.
 
-            If you are interested in analysing the demand and supply balance in the NEM, you may consider the following datasets:
+            (2) If you are interested in analysing the demand and supply balance in the NEM, you may consider the following datasets:
             - [`DEMAND_FORECAST.DEMANDOPERATIONALACTUAL`](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report_files/Elec18.htm#1): \
             This table provides the actual operational demand data for 30-minute intervals.
             - [`DEMAND_FORECAST.DEMANDOPERATIONALFORECAST`](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report_files/Elec18.htm#9): \
@@ -80,7 +80,7 @@ st.markdown('''
             Please refer to the [MMS Data Model](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report.htm) \
             for detailed information on the data structure and definitions. 
 
-            If you are interested in geographical and locational aspects of the NEM infrastructure, you may consider the following datasets:
+            (3) If you are interested in geographical and locational aspects of the NEM infrastructure, you may consider the following datasets:
             - [Electricity Transmission Lines](https://digital.atlas.gov.au/datasets/digitalatlas::electricity-transmission-lines/about): \
             This dataset provides the spatial information of electricity transmission lines across Australia, including the line type, voltage, and ownership details.
             - [Transmission Substations](https://digital.atlas.gov.au/datasets/digitalatlas::transmission-substations/about): \
@@ -91,9 +91,12 @@ st.markdown('''
             
             ##### Data Download
 
-            - You can manually download these datasets from the [Monthly Archive](https://visualisations.aemo.com.au/aemo/nemweb/#mms-data-model) section of the NEMWEB portal by month and year.
+            - You can manually download these datasets from the [Monthly Archive](https://visualisations.aemo.com.au/aemo/nemweb/#mms-data-model) section of the NEMWEB portal by month and year. \
+               We recommend downloading zipped CSV files for your chosen datasets rather than the entire zipped monthly database. 
             - Alternatively, you can use the out-of-box packages to download these datasets from the NEMWEB portal, such as:
                 - Python package: [NEMOSIS](https://github.com/UNSW-CEEM/NEMOSIS)
                 - R package: [nemwebR](https://github.com/aleemon/nemwebR)
+            - If you consider the weather data for analysis, you can download the climate data from the \
+                [Bureau of Meteorology (BOM)](http://www.bom.gov.au/climate/data/index.shtml).
             - For spatial datasets, you can download the shapefiles from the [Australian Government Digital Atlas](https://digital.atlas.gov.au/) portal.
             ''')
