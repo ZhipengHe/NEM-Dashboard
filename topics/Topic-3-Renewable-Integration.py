@@ -160,7 +160,7 @@ st.markdown('''
             These tables are publicly available \
             on the [NEMWEB](https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/market-data-nemweb). \
             Here lists the relevant table names and features from MMS Data Model used in above example:
-            - [`DISPATCH.DISPATCH_UNIT_SCADA`](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report.htm): \
+            - [`DISPATCH.DISPATCH_UNIT_SCADA`](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report_files/Elec20.htm#88): \
             This table contains the real-time MW reading from generators and scheduled loads for each dispatch unit, including renewable energy sources, \
             by SCADA (Supervisory Control and Data Acquisition) systems.
             - [`PARTICIPANT_REGISTRATION.DUDETAILSUMMARY`](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report_files/Elec44.htm#60): \

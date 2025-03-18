@@ -24,13 +24,16 @@ topic2 = st.Page("topics/Topic-2-Outage-Analysis.py", title="Topic 2: Outage Ana
 topic3 = st.Page("topics/Topic-3-Renewable-Integration.py", title="Topic 3: Renewable Integration", icon="♻️")
 topic4 = st.Page("topics/Topic-4-Infrastructure-Analysis.py", title="Topic 4: Infrastructure Analysis", icon="🗼")
 
+# guide for using aemo dataset
+how_to_download = st.Page("data/NEMWEB-Data-Download-Guide.py", title="Download Data from NEMWeb", icon="📥")
 
 # Create the navigation bar
 
 pg = st.navigation(
     {
         "Home": [home],
-        "Topics": [topic1, topic2, topic3, topic4],
+        "Topic": [topic1, topic2, topic3, topic4],
+        "Guide": [how_to_download],
         "About": [about]
     }
 )
