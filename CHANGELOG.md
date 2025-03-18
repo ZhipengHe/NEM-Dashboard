@@ -4,8 +4,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.1.5] - 2025-03-18
 
+### Added
+
+- Add Hugging Face Spaces sync workflow and related configurations by @ZhipengHe in https://github.com/ZhipengHe/NEM-Dashboard/pull/23
+- 0.1.5 dev1: Add Hugging Face Spaces sync workflow and related configurations by @ZhipengHe in https://github.com/ZhipengHe/NEM-Dashboard/pull/24
+- 0.1.5 dev2: Add guide for downloading AEMO dataset and update navigation structure by @ZhipengHe in https://github.com/ZhipengHe/NEM-Dashboard/pull/25
+
+
+## [0.1.4] - 2025-03-04
+
+### Fixed
+
+- Improve Outage Analysis visualization in Topic 2 by @ZhipengHe in #21
+- 0.1.4 dev1: Fix visualisation render issue and add weather data reference by @ZhipengHe in #22
+
+
+## [0.1.3] - 2025-03-04
+
+### Added
+
+- Enhance Topic 2: Network Outage Analysis Dashboard by @ZhipengHe in #16
+- Add renewable energy generation analysis to Topic 3 dashboard by @ZhipengHe in #17
+- Enhance Topic 4 pages by adding NEM official dashboard by @ZhipengHe in #18
+- 0.1.3 dev1: Add visualisation to four topics; Fix some typos, and bugs by @ZhipengHe in #19
 
 
 ## [0.1.2] - 2025-03-03
@@ -55,8 +78,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Changelog 
 
 
-[Unreleased]: https://github.com/ZhipengHe/NEM-Dashboard/compare/v0.1.2...HEAD
-[0.1.2]: https://github.com/ZhipengHe/NEM-Dashboard/compare/v0.1.0...v0.1.2
+[Unreleased]: https://github.com/ZhipengHe/NEM-Dashboard/compare/v0.1.5...HEAD
+[0.1.5]: https://github.com/ZhipengHe/NEM-Dashboard/compare/v0.1.4...v0.1.5
+[0.1.4]: https://github.com/ZhipengHe/NEM-Dashboard/compare/v0.1.3...v0.1.4
+[0.1.3]: https://github.com/ZhipengHe/NEM-Dashboard/compare/v0.1.2...v0.1.3
+[0.1.2]: https://github.com/ZhipengHe/NEM-Dashboard/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/ZhipengHe/NEM-Dashboard/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/ZhipengHe/NEM-Dashboard/releases/tag/v0.1.0
 
