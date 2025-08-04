@@ -3,13 +3,13 @@ import warnings
 
 
 st.set_page_config(
-    page_title="NEM Dashboard | A simple dashboard for Australia's National Electricity Market (NEM) data",
+    page_title="NEM Dashboard | A data analysis report for Australia's National Electricity Market (NEM) data",
     page_icon=":rocket:",
     layout="wide",
     menu_items={
         'Get Help': "https://github.com/ZhipengHe/NEM-Dashboard",
         'Report a bug': "https://github.com/ZhipengHe/NEM-Dashboard/blob/main/CONTRIBUTING.md#reporting-bugs",
-        'About': "A simple dashboard for Australia's National Electricity Market (NEM) data."
+        'About': "A data analysis report for Australia's National Electricity Market (NEM) data."
     }
     )
 

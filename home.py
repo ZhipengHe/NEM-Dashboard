@@ -2,13 +2,13 @@ import streamlit as st
 
 ## Page Meta Information
 
-st.warning('This dashboard is a work in progress. It is intended for educational purposes only. If you have any feedback \
+st.warning('This data analysis report is a work in progress. It is intended for research purposes only. If you have any feedback \
            or suggestions, please feel free to open an issue on the [GitHub](https://github.com/ZhipengHe/NEM-Dashboard/issues).', icon="⚠️")
 
 st.header("NEM Dashboard")
 
 st.write('''
-         *A simple dashboard for Australia's National Electricity Market (NEM) data*
+         *A data analysis report for Australia's National Electricity Market (NEM) data*
 
          [![Docker Image Version](https://img.shields.io/docker/v/zhipenghe/nem-dashboard)](https://hub.docker.com/r/zhipenghe/nem-dashboard) \
          [![Docker Image Size](https://img.shields.io/docker/image-size/zhipenghe/nem-dashboard)](https://hub.docker.com/r/zhipenghe/nem-dashboard) \
@@ -16,7 +16,7 @@ st.write('''
 
          ***Author: Zhipeng He ([zhipeng.he@hdr.qut.edu.au](mailto:zhipeng.he@hdr.qut.edu.au))***
          
-         ***Last Updated: March 04, 2025***
+         ***Last Updated: June 22, 2025***
         ''')
 
 # st.write("---")
@@ -34,7 +34,7 @@ st.markdown('''
          The **Australian Energy Market Operator (AEMO)** manages this market by coordinating electricity generation \
          and consumption every five minutes, ensuring system reliability and efficiency. 
 
-        This dashboard aims to provide insights into the NEM's operation, focusing on four key topics: \
+        This data analysis report aims to provide insights into the NEM's operation, focusing on four key topics: \
          ***price anomaly detection***, ***outage analysis***, ***renewable integration***, and ***infrastructure analysis***. \
          By analysing historical data, we can identify patterns and trends in the NEM, helping \
          to improve market transparency and decision-making.
@@ -46,7 +46,7 @@ st.markdown('''
 st.subheader("Project Topics")
 
 st.write("Each topic features a curated sample visualization designed for exploration and insight. \
-         We trust that this dashboard will deepen your understanding of the NEM while sparking \
+         We trust that this analysis report will deepen your understanding of the NEM while sparking \
          innovative ideas for your own analysis.")
 
 st.page_link("topics/Topic-1-Price-Anomaly-Detection.py", label="**Topic 1: Electricity Pricing Anomaly Detection and Analysis**", icon="📈") 

@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/github/license/ZhipengHe/NEM-Dashboard)](LICENSE)
 
 
-This is a simple dashboard for Australian National Electricity Market (NEM) data. The data used in the above analysis is sourced from the Australian Energy Market Operator (AEMO) and is publicly available on the [NEMWEB](https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/market-data-nemweb). The extracted data is stored in folder `data` and the dashboard is created using [Streamlit](https://streamlit.io/).
+This is a data analysis report for Australian National Electricity Market (NEM) data. The data used in the analysis is sourced from the Australian Energy Market Operator (AEMO) and is publicly available on the [NEMWEB](https://aemo.com.au/energy-systems/electricity/national-electricity-market-nem/data-nem/market-data-nemweb). The extracted data is stored in folder `data` and the analysis report is created using [Streamlit](https://streamlit.io/).
 
 ## Installation
 
