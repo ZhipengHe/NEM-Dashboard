@@ -1,0 +1,35 @@
+[project]
+name = "NEM-Dashboard"
+version = "0.1.6"
+dependencies = [
+    "altair==5.5.0",
+    "pandas==2.2.3",
+    "streamlit==1.41.1",
+    "jupyterlab==4.3.4",
+]
+requires-python = ">=3.10"
+authors = [
+    {name = "Zhipeng He", email = "zhipeng.he@hdr.qut.edu.au"},
+]
+maintainers = [
+    {name = "Zhipeng He", email = "zhipeng.he@hdr.qut.edu.au"},
+]
+description = "A data analysis report for Australia's National Electricity Market (NEM) data"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["dashboard", "NEM", "electricity", "AEMO"]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[project.urls]
+Homepage = "https://nem.zhipenghe.me"
+Repository = "https://github.com/ZhipengHe/NEM-Dashboard.git"
+"Bug Tracker" = "https://github.com/ZhipengHe/NEM-Dashboard/issues"
+

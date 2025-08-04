@@ -30,7 +30,7 @@ with st.container():
             **Copyright Notice**
             - The NEM Official Dashboard displayed on this website is the property of the Australian \
                Energy Market Operator (AEMO). All rights, including data, design, and content, belong \
-               to AEMO and are used here for ***educational purposes only****.
+               to AEMO and are used here for ***research purposes only***.
             - This website does ***not*** claim ownership of the dashboard or its content. For official \
                information, licensing, or permissions, please visit [AEMO Website](https://aemo.com.au/).
             - The dashboard is sourced ***directly from AEMO***, and we do ***not*** modify or control its \
@@ -49,8 +49,8 @@ st.subheader("Data Sources")
 
 st.info('''
         Before starting your analysis,
-        - Please select one or more of the datasets below, or choose other datasets that best align with your proposed research objectives. 
-        - Make sure your selection reflects your project's goals and the features you need for analysis.
+        - Please select one or more of the datasets below, or choose other datasets that best align with your analysis objectives. 
+        - Make sure your selection reflects your project requirements and the infrastructure metrics you need to analyse.
         ''', icon="💡")
 
 st.markdown('''
@@ -73,7 +73,7 @@ st.markdown('''
             This table provides the actual operational demand data for 30-minute intervals.
             - [`DEMAND_FORECAST.DEMANDOPERATIONALFORECAST`](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report_files/Elec18.htm#9): \
             This table provides the operational demand forecast data for 30-minute intervals, including the 10%, 50%, and 90% of exceedance operational demand forecast value.
-            - [`DISPATCH.DISPATCH_UNIT_SCADA`](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report.htm): \
+            - [`DISPATCH.DISPATCH_UNIT_SCADA`](https://nemweb.com.au/Reports/Current/MMSDataModelReport/Electricity/Electricity%20Data%20Model%20Report_files/Elec20.htm#79): \
             This table contains the real-time MW reading from generators and scheduled loads for each dispatch unit, including renewable energy sources, \
             by SCADA (Supervisory Control and Data Acquisition) systems.
 
@@ -81,11 +81,11 @@ st.markdown('''
             for detailed information on the data structure and definitions. 
 
             (3) If you are interested in geographical and locational aspects of the NEM infrastructure, you may consider the following datasets:
-            - [Electricity Transmission Lines](https://digital.atlas.gov.au/datasets/digitalatlas::electricity-transmission-lines/about): \
+            - [Electricity Transmission Lines](https://digital.atlas.gov.au/datasets/digitalatlas::electricity-transmission-lines-1/about): \
             This dataset provides the spatial information of electricity transmission lines across Australia, including the line type, voltage, and ownership details.
-            - [Transmission Substations](https://digital.atlas.gov.au/datasets/digitalatlas::transmission-substations/about): \
+            - [Transmission Substations](https://digital.atlas.gov.au/datasets/digitalatlas::transmission-substations-1/about): \
             This dataset provides the spatial information of transmission substations across Australia, including the substation name, type, and capacity details.
-            - [Major Power Stations](https://digital.atlas.gov.au/datasets/digitalatlas::major-power-stations/about): \
+            - [Major Power Stations](https://digital.atlas.gov.au/datasets/digitalatlas::major-power-stations-1/about): \
             This dataset provides the spatial information of major power stations across Australia, including the power station name, type, and capacity details.
 
             
